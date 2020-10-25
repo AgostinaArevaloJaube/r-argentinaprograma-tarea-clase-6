@@ -12,8 +12,7 @@
 
 <body>
 	<nav class="navbar">
-		<a href="/index.html"><img class="navbar__img" src="/assets/logo.jpg"
-			alt="Logo r-argentinaprograma"></a>
+		<a href="/index.html"><img class="navbar__img" src="/assets/logo.jpg" alt="Logo r-argentinaprograma"></a>
 		<ul class="navbar__list">
 			<li class="navbar__item"><a class="navbar__link" href="/index.html">Inicio</a></li>
 			<li class="navbar__item"><a class="navbar__link" href="/tarea-1/index.html">Tarea 1</a></li>
@@ -22,8 +21,31 @@
 	</nav>
 
 	<main class="main">
-		<h1 class="titulo" >r/argentina programa</h1>
-		<h2 class="subtitulo" >Tarea 1</h2>
+		<h1 class="title">Sumemos las edades de tu familia</h1>
+
+		<form class="form">
+			<label class="label" for="number-of-members">Ingresá la cantidad de integrantes de tu familia:</label>
+
+			<input class="input" type="number" id="number-of-members">
+
+			<button class="btn" type="submit" id="next-step">Siguiente paso</button>
+
+			<div class="members" id="members">
+			</div>
+
+			<div>
+				<button type="button" id="calculate" class="btn hidden">Calcular</button>
+
+				<div id="results" class="hidden">
+					<p>La edad mayor es: <strong id="older-age"></strong></p>
+					<p>La menor edad es: <strong id="youngest-age"></strong></p>
+					<p>El promed io de edad es: <strong id="average"></strong></p>
+				</div>
+
+				<button type="reset" id="reset" class="btn reset hidden">Resetear</button>
+			</div>
+		</form>
+
 	</main>
 	<script src="main.js"></script>
 </body>
