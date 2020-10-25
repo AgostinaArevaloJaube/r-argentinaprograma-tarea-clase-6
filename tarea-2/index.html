@@ -22,8 +22,32 @@
 	</nav>
 
 	<main class="main">
-		<h1 class="title">r/argentina programa</h1>
-		<h2 class="subtitle">Tarea 2 - EN PROGRESO</h2>
+
+		<h1 class="title">Calculemos los sueldos de tu familia</h1>
+
+		<form class="form">
+			<label class="label" for="number-of-members">Ingresá la cantidad de integrantes de tu familia:</label>
+
+			<input class="input" type="number" id="number-of-members">
+
+			<button class="btn" type="submit" id="next-step">Siguiente paso</button>
+
+			<div class="members" id="members">
+			</div>
+
+			<div>
+				<button type="button" id="calculate" class="btn hidden">Calcular</button>
+
+				<div id="results" class="hidden">
+					<p>El mayor salario anual es: <strong id="older-age"></strong></p>
+					<p>El menor salario anual es: <strong id="youngest-age"></strong></p>
+					<p>El promed io de edad es: <strong id="average"></strong></p>
+				</div>
+
+				<button type="reset" id="reset" class="btn reset hidden">Resetear</button>
+			</div>
+		</form>
+
 	</main>
 	<script src="main.js"></script>
 </body>
