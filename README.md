@@ -1,5 +1,7 @@
 # Tareas Clase 6
 
+## [r/argentina programa](https://argentinaprograma.com/) es un curso para aprender JavaScript desde 0, gratis y en español. Dictado por Fabricio Sodano.
+
 [Live Demo](https://r-argentinaprograma-clase-6.netlify.app/)
 
 ---
