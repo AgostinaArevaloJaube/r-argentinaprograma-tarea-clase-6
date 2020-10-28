@@ -5,9 +5,9 @@ const $membersContainer = document.querySelector('#members');
 const $resetBtn = document.querySelector('#reset');
 const $calculateBtn = document.querySelector('#calculate');
 const $results = document.querySelector('#results');
-const $OlderAge = document.querySelector('#older-age');
+const $olderAge = document.querySelector('#older-age');
 const $youngestAge = document.querySelector('#youngest-age');
-const $average = document.querySelector('#average');
+const $averageAge = document.querySelector('#average');
 
 // Events
 $nextStep.onclick = (event) => {
@@ -19,8 +19,8 @@ $nextStep.onclick = (event) => {
 
 $calculateBtn.onclick = (event) => {
 	event.preventDefault();
-	const $memberAge = document.querySelectorAll('.member__input');
-	const ages = getAges($memberAge);
+	const $memberAges = document.querySelectorAll('.member__input');
+	const ages = getAges($memberAges);
 	displayResults(ages);
 };
 
@@ -69,24 +69,24 @@ const getAges = (inputAge) => {
 	return ages;
 };
 
-const getBiggestAge = (ages) => {
-	let biggestAge = ages[0];
+const getOldestAge = (ages) => {
+	let oldestAge = ages[0];
 	for (let i = 0; i < ages.length; i++) {
-		if (ages[i] > biggestAge) {
-			biggestAge = ages[i];
+		if (ages[i] > oldestAge) {
+			oldestAge = ages[i];
 		}
 	}
-	return biggestAge;
+	return oldestAge;
 };
 
-const getSmallestAge = (ages) => {
-	let smallestAge = ages[0];
+const getYoungestAge = (ages) => {
+	let youngestAge = ages[0];
 	for (let i = 0; i < ages.length; i++) {
-		if (ages[i] < smallestAge) {
-			smallestAge = ages[i];
+		if (ages[i] < youngestAge) {
+			youngestAge = ages[i];
 		}
 	}
-	return smallestAge;
+	return youngestAge;
 };
 
 const getAverage = (ages) => {
@@ -99,7 +99,7 @@ const getAverage = (ages) => {
 
 const displayResults = (ages) => {
 	$results.classList.remove('hidden');
-	$OlderAge.textContent = getBiggestAge(ages);
-	$youngestAge.textContent = getSmallestAge(ages);
-	$average.textContent = getAverage(ages);
+	$olderAge.textContent = getOldestAge(ages);
+	$youngestAge.textContent = getYoungestAge(ages);
+	$averageAge.textContent = getAverage(ages);
 };
